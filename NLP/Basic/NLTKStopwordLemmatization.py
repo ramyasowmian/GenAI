@@ -1,6 +1,7 @@
 # NLTKStopwordLemmatization.py
 # This code performs tokenization, stop words removal, and lemmatization using NLTK.
 
+import os
 import pandas as pd 
 import nltk
 from nltk.tokenize import word_tokenize  
@@ -16,8 +17,12 @@ nltk.download("omw-1.4")
 nltk.download("averaged_perceptron_tagger")  
 nltk.download('averaged_perceptron_tagger_eng')              
 
+# Get the directory where this script is located
+script_dir = os.path.dirname(os.path.abspath(__file__))
+csv_path = os.path.join(script_dir, "Reviews.csv")
+
 # Step 1: Load the first 100 reviews from the CSV file
-df = pd.read_csv("ZReviews.csv", nrows=100)              
+df = pd.read_csv(csv_path, nrows=100)              
 
 # Step 2: Tokenize the reviews into words
 lowerText = df["Text"].str.lower()    

@@ -1,6 +1,7 @@
 # NLTKStopword.py
 # This code performs tokenization and stop words removal using NLTK
  
+import os
 import pandas as pd 
 import nltk
 from nltk.tokenize import word_tokenize  
@@ -8,10 +9,15 @@ from nltk.corpus import stopwords
 
 # Download the necessary NLTK resources (run once)
 nltk.download("punkt")                                      
-nltk.download("stopwords")                                  
+nltk.download("stopwords")   
+
+# Get the directory where this script is located
+script_dir = os.path.dirname(os.path.abspath(__file__))
+resource_dir = os.path.join(script_dir, "..", "Resource")
+csv_path = os.path.join(resource_dir, "Reviews.csv")
 
 # Step 1: Load the first 100 reviews from the CSV file
-df = pd.read_csv("ZReviews.csv", nrows=100)              
+df = pd.read_csv(csv_path, nrows=100)              
 
 # Step 2: lowercase the reviews
 lowerText = df["Text"].str.lower()    
