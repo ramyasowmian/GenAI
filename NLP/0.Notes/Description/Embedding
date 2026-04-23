@@ -1,0 +1,158 @@
+
+# Text Embedding Techniques in NLP
+
+## 1. Word Embeddings (Static Embeddings)
+
+### Word2Vec
+- **Skip-gram**: Predicts context words from target word using neural networks
+- **CBOW (Continuous Bag of Words)**: Predicts target word from context words
+- Learns dense vector representations (typically 100-300 dimensions)
+- Captures semantic relationships (king - man + woman ≈ queen)
+- Training methods: Negative sampling, Hierarchical softmax
+
+### GloVe (Global Vectors for Word Representation)
+- Factorizes word co-occurrence matrix to learn embeddings
+- Combines global statistics with local context window methods
+- Better at capturing linear relationships between words
+- Pre-trained on large corpora like Wikipedia and Common Crawl
+
+### FastText
+- Extension of Word2Vec that incorporates subword information
+- Represents words as bags of character n-grams (typically 3-6 grams)
+- Handles out-of-vocabulary words and morphological variations
+- Particularly effective for morphologically rich languages
+
+## 2. Contextual Embeddings (Dynamic Embeddings)
+
+### ELMo (Embeddings from Language Models)
+- Uses bidirectional LSTMs to generate contextualized representations
+- Pre-trained on large corpora, fine-tuned for downstream tasks
+- Captures word sense disambiguation and syntactic information
+- Provides different layers for different linguistic properties
+
+### BERT (Bidirectional Encoder Representations from Transformers)
+- Transformer-based model with bidirectional attention
+- Pre-training tasks: Masked Language Modeling + Next Sentence Prediction
+- Generates context-dependent embeddings for each token
+- Variants: BERT-base, BERT-large, RoBERTa, DistilBERT, ALBERT
+
+### GPT Series (Generative Pre-trained Transformers)
+- **GPT-1**: 117M parameters, unidirectional transformer
+- **GPT-2**: 1.5B parameters, improved language modeling
+- **GPT-3/4**: Massive scale (175B+ parameters), few-shot learning
+- **ChatGPT**: Fine-tuned for conversational interactions
+- Autoregressive generation with strong language understanding
+
+### T5 (Text-to-Text Transfer Transformer)
+- Treats all NLP tasks as text-to-text transformation problems
+- Encoder-decoder architecture with span corruption pre-training
+- Unified framework for translation, summarization, classification
+
+## 3. Sentence and Document Embeddings
+
+### Sentence-BERT (SBERT)
+- Modification of BERT for generating sentence-level embeddings
+- Uses siamese/triplet network structures for training
+- Optimized for semantic similarity and clustering tasks
+- Much faster inference than full BERT for sentence tasks
+
+### Universal Sentence Encoder (USE)
+- Developed by Google for sentence-level embeddings
+- Available in transformer and CNN-based variants
+- Trained on multiple tasks including translation and classification
+- Effective for semantic similarity and transfer learning
+
+### Doc2Vec
+- Extension of Word2Vec to document-level embeddings
+- **PV-DM (Distributed Memory)**: Like CBOW but includes paragraph vectors
+- **PV-DBOW (Distributed Bag of Words)**: Like skip-gram for paragraphs
+- Learns fixed-length representations for variable-length documents
+
+## 4. Character and Subword Embeddings
+
+### Character Embeddings
+- Represent text at the character level using CNNs or RNNs
+- Robust to out-of-vocabulary words and spelling variations
+- Useful for languages with complex morphology
+- Often combined with word-level embeddings
+
+### Byte Pair Encoding (BPE)
+- Subword tokenization method used in GPT-2 and many transformers
+- Iteratively merges most frequent character pairs
+- Balances vocabulary size with handling of rare words
+- Enables open-vocabulary modeling
+
+### WordPiece
+- Subword tokenization used in BERT and DistilBERT
+- Similar to BPE but uses likelihood-based merging criteria
+- Optimizes for language model probability
+- Handles compound words and morphological variations
+
+## 5. Position and Structural Embeddings
+
+### Absolute Position Embeddings
+- Fixed embeddings added to token embeddings based on position
+- Used in original transformer and BERT models
+- Limited to maximum sequence length seen during training
+
+### Relative Position Embeddings
+- Embeddings based on distance between token pairs
+- Used in models like RoBERTa and T5
+- Better generalization to longer sequences
+
+### Rotary Position Embedding (RoPE)
+- Uses rotation matrices to encode relative positions
+- Applied to attention mechanisms rather than token embeddings
+- Enables better length extrapolation and computational efficiency
+
+## 6. Advanced and Specialized Embeddings
+
+### Contrastive Learning Embeddings
+- **SimCSE**: Simple contrastive learning for sentence embeddings
+- **CLIP**: Vision-language embeddings using contrastive objectives
+- Learn representations by maximizing similarity of similar pairs
+
+### Multilingual Embeddings
+- **mBERT**: Multilingual BERT trained on 104 languages
+- **XLM-R**: Cross-lingual language model with improved multilingual capabilities
+- **LaBSE**: Language-agnostic BERT sentence embeddings
+
+### Domain-Specific Embeddings
+- **BioBERT**: BERT fine-tuned on biomedical literature
+- **SciBERT**: BERT for scientific publications
+- **Legal-BERT**: BERT for legal documents and case law
+
+### Adapter-Based Embeddings
+- **Adapter modules**: Lightweight task-specific layers
+- **LoRA**: Low-rank adaptation for efficient fine-tuning
+- Enable parameter-efficient transfer learning
+
+## Key Properties of Text Embeddings
+
+### Static vs Dynamic
+- **Static**: Word2Vec, GloVe - fixed representation per word
+- **Dynamic/Contextual**: BERT, GPT - representation depends on context
+
+### Dimensionality
+- Typically 50-768 dimensions for word embeddings
+- Higher dimensions (1024+) for contextual embeddings
+
+### Training Objectives
+- **Predictive**: Language modeling, masked prediction
+- **Contrastive**: Similarity-based learning
+- **Generative**: Autoregressive text generation
+
+### Applications
+- **Semantic Similarity**: Finding related words/documents
+- **Text Classification**: Sentiment analysis, topic modeling
+- **Machine Translation**: Cross-lingual representations
+- **Question Answering**: Understanding context and relationships
+
+### Evaluation Metrics
+- **Intrinsic**: Word similarity tasks, analogy completion
+- **Extrinsic**: Performance on downstream NLP tasks
+- **Probabilistic**: Perplexity, BLEU scores
+
+Text embeddings have revolutionized NLP by enabling machines to understand semantic relationships and context in human language, forming the foundation of modern language models and applications.
+	
+

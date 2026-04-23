@@ -1,0 +1,69 @@
+
+# Text Encoding Techniques in NLP
+
+## 1. One-Hot Encoding
+- Represents each word as a binary vector with a single 1 and rest 0s
+- Creates very sparse, high-dimensional vectors
+- Simple but memory-intensive for large vocabularies
+- Vocabulary size determines vector dimensionality
+- No semantic relationships captured between words
+
+## 2. Bag of Words (BoW)
+- Counts word occurrences in a document, ignoring word order
+- Creates a fixed-size vector of word frequencies
+- Loses word sequence and grammatical information
+- Simple frequency-based representation
+- Foundation for many traditional NLP algorithms
+
+## 3. TF-IDF (Term Frequency-Inverse Document Frequency)
+- Weighs word importance based on frequency in document and rarity across corpus
+- Higher weights for distinctive words, lower for common words
+- Useful for information retrieval and text classification
+- Reduces impact of frequently occurring words
+- Mathematical formula: TF × IDF
+
+## 4. Count Vectorization
+- Similar to BoW but optimized for counting word occurrences
+- Produces sparse vectors using efficient data structures
+- Good for fast text representation and processing
+- Often used with scikit-learn's CountVectorizer
+- Supports n-gram features and stop word removal
+
+## 5. Hash Vectorization
+- Uses hashing to map words to fixed-size vectors
+- Reduces memory usage and handles unknown words
+- May cause hash collisions (different words map to same index)
+- No vocabulary storage required
+- Useful for streaming data and large datasets
+
+## 6. Integer/Ordinal Encoding
+- Maps each unique word to a unique integer
+- Compact representation useful for neural networks
+- Order matters for sequential models
+- Simple mapping: word → integer ID
+- Often used as input to embedding layers
+
+## 7. N-grams
+- Captures sequences of n consecutive words/characters
+- Bigrams (2-grams), Trigrams (3-grams), etc.
+- Preserves some word order information
+- Increases feature space dimensionality
+- Useful for capturing local context and phrases
+
+## 8. Character-Level Encoding
+- Encodes text at the character level instead of words
+- Useful for handling misspellings, rare words, and morphology
+- Longer sequences but handles any input text
+- Robust to out-of-vocabulary issues
+- Often used with CNNs for text classification
+
+## 9. Subword Tokenization
+- **BPE (Byte Pair Encoding)**: Merges frequent character pairs iteratively
+- **WordPiece**: Used in BERT, likelihood-based merging
+- **SentencePiece**: Language-independent approach
+- Balances vocabulary size and sequence length
+- Enables handling of rare words and morphological variations
+
+
+
+

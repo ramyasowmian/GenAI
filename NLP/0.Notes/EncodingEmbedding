@@ -1,0 +1,23 @@
+
+Encoding Techniques
+
+1. One-Hot Encoding
+2. Bag of Words (BoW)
+3. TF-IDF (Term Frequency-Inverse Document Frequency)
+4. Count Vectorization
+5. Hash Vectorization
+6. Integer / Ordinal Encoding
+7. N-grams
+8. Character-Level Encoding
+9. Subword Tokenization
+10. Position Embeddings
+
+
+Embeddings Techniques
+
+1. Word Embeddings (Static Embeddings) - (Word2Vec, GloVe, FastText)
+2. Contextual Embeddings (Dynamic Embeddings) - (ELMo, BERT, GPT Series, T5)
+3. Sentence and Document Embeddings - (SBERT, USE, Doc2Vec) 
+4. Character and Subword Embeddings - (Character Embeddings, BPE, WordPiece)
+5. Position and Structural Embeddings - (Absolute, Relative, Rotary)
+6. Advanced and Specialized Embeddings 

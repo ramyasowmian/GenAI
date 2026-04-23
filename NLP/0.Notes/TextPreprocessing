@@ -1,0 +1,15 @@
+
+Text Pre Processing 
+
+1. lowercase 
+2. uppercase 
+3. emojis
+4. punctuation
+5. html, url 
+6. stopwaords
+7. abbriviation or slang
+8. steaming or lemmatization based on POS tags
+9. spelling correction 
+10. whitespace 
+11. tokenization
+12. token 

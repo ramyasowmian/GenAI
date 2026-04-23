@@ -5,6 +5,10 @@
 # Text, (clean up), Tokenization, Token, TF-IDF Vectorizer, Vector(TF-IDF Matrix), Vocabulary(Feature Names)
 # ===================================================================================================================
 
+# Create TF-IDF vectorizer with stopwords removal and lowercase conversion
+# Punctuation and numbers are automatically ignored by the TfidfVectorizer when stop_words='english' is used, 
+# but we will also apply custom cleaning in the tokenizer to ensure that all unwanted characters are removed before tokenization.
+
 import re
 import os
 import pandas as pd
@@ -78,6 +82,7 @@ def clean_Token(text):
 # ------------------- TF-IDF VECTORIZER -------------------
 # Create TF-IDF vectorizer with the custom tokenizer
 vectorizer = TfidfVectorizer(stop_words='english', 
+                             lowercase=True,
                              tokenizer=clean_Token)
 
 # ------------------------- VECTOR -------------------------
