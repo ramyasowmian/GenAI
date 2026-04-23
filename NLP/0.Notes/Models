@@ -1,0 +1,52 @@
+Deep Learning models
+1. ANN - Tabular or Table data <- Numerical or categorical data <- Non sequencal data 
+2. CNN - Image <- Grid or Matrix <- Non sequencal data 
+3. RNN, LSTM, GRU - Sequence 
+4. GAN(AutoEncoder) - Generation 
+5. RL - Reward base system
+
+Data 
+ - Non sequence <- order doesn't matter
+ - Sequence  <- order of elements matters
+
+Archtecture 
+1. many to one <- IP to OP <- Seq to non-seq
+2. one to many <- IP to OP <- non-seq to Seq
+3. many to many <- IP to OP <- Seq to Seq 
+        |-> Synchronzice 
+        |-> ASynchronzice                                      
+                |->Variable length IP to OP
+                        |  Application
+                        -> Text Summarization
+                        -> Translation 
+                        -> Chatbot or QA 
+
+
+Main Model -> RNN -> LSTM -> GRU -> Trasformer 
+                |       |       |
+                |       |       |
+              memory state  
+                |       | 
+                ->Hidden state  |
+                        |       |
+                        |       |
+                   memory state       
+                        -> cell state <- long term memeory 
+                        -> hidden state <- short term memory
+                        |
+                        -> forget gate 
+                        -> input gate 
+                        -> out gate 
+                                |
+                                |
+                                memory state 
+                                -> hidden state <- short term memory
+                                |
+                                |
+                                -> Reset gate
+                                -> Update gate
+                                (GRU is simpler than an LSTM)
+
+
+    
+Note: LSTM - https://colah.github.io/posts/2015-08-Understanding-LSTMs

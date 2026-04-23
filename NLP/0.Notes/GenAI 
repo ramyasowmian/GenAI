@@ -1,0 +1,9 @@
+GenAI Archtecture 
+
+1. GenAI 
+2. Text Preprocessing 
+3. Encoding & Embedding -> (many to many) <- Seq to Seq
+4. Encoder & Decoder -> (many to many) <- Seq to Seq
+5. Encoder & Decorder with Attention -> (many to many) <- Seq to Seq
+6. Transformer(Self Attention <- Attention all your need) -> (many to many) <- Seq to Seq
+
