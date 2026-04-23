@@ -1,6 +1,6 @@
 
 # ===================================================================================================================
-# BOW 
+# BOW Implementation for NLP
 # Clean up -> (remove Stop words, punctuation, numbers, convert to lowercase, apply lemmatization based on POS tags)
 # Text, (clean up), Tokenization, Token, BOW Vectorizer, Vector(Matrix), Vocabulary(Feature Names)
 # ===================================================================================================================

@@ -1,5 +1,6 @@
 
 # ===================================================================================================================
+# TF-IDF Implementation for NLP
 # TF-IDF with Custom Lemmatization Tokenizer
 # Clean up -> (remove Stop words, punctuation, numbers, convert to lowercase, apply lemmatization based on POS tags)
 # Text, (clean up), Tokenization, Token, TF-IDF Vectorizer, Vector(TF-IDF Matrix), Vocabulary(Feature Names)
