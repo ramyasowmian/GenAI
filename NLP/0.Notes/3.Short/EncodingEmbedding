@@ -12,7 +12,6 @@ Encoding Techniques
 9. Subword Tokenization
 10. Position Embeddings
 
-
 Embeddings Techniques
 
 1. Word Embeddings (Static Embeddings) - (Word2Vec, GloVe, FastText)
@@ -21,3 +20,6 @@ Embeddings Techniques
 4. Character and Subword Embeddings - (Character Embeddings, BPE, WordPiece)
 5. Position and Structural Embeddings - (Absolute, Relative, Rotary)
 6. Advanced and Specialized Embeddings 
+
+Important Encoding  - OneHotEncoding, BOW, TF-IDF
+Important Embedding - Word2Vec(CBOW, Skip-gram), BERT, GPT Series
